@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<link href="style.css" rel="stylesheet">
+		<script src="modifiers.js"></script>
+		<script src="bzip2.js"></script>
+		<script src="main.js"></script>
+		<title>EU4 Modifier Search</title>
+		<link rel="icon" href="favicon.ico">
+	</head>
+	<body>
+		<div class="container" id="loading">
+			<div class="loading">
+				<div class="dot"></div>
+				<div class="dot delay-1"></div>
+				<div class="dot delay-2"></div>
+			</div>
+		</div>
+		<div class="container hidden" id="main-content">
+			<div class="header">
+				<div class="row">
+					<div class="search-box">
+						<input class="search" id="search" type="search" placeholder="Search for a modifier...">
+						<svg xmlns="http://www.w3.org/2000/svg" class="search-icon" id="search-icon" viewBox="0 0 512 512">
+							<path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
+							<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/>
+						</svg>
+					</div>
+				</div>
+				<div class="row">
+					<div class="suggestion-box hidden" id="suggestion-box">
+					</div>
+				</div>
+			</div>
+			<div class="result-box" id="result-box"></div>
+		</div>
+		<div class="container">
+			<div class="footer">
+				<div class="row">Last updated for&nbsp;<span id="version" class="warning">loading version...</span></div>
+				<div class="row">Please be a good citizen and report any mistakes or omissions you catch :)</div>
+				<div class="row">Want an enhancement? Let me know. I'll see what I can do!</div>
+				<div class="row">Credit&nbsp;<a href="https://github.com/kirilloid/bzip2-js/tree/master">kirilloid</a>&nbsp;for the nice JS bzip2 implementation</div>
+				<div class="row">Credit&nbsp;<a href="https://ionic.io/ionicons">ionicons</a>&nbsp;for icons</div>
+				<div class="row"><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div>
+			</div>
+		</div>
+	</body>
+	<svg xmlns="http://www.w3.org/2000/svg" class="collapse hidden" id="collapse-icon" viewBox="0 0 512 512">
+		<path d="M136 104l120 104 120-104M136 408l120-104 120 104" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+	</svg>
+	<svg xmlns="http://www.w3.org/2000/svg" class="collapse hidden" id="expand-icon" viewBox="0 0 512 512">
+		<path d="M136 208l120-104 120 104M136 304l120 104 120-104" stroke="currentColor" fill="none" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+</html>
