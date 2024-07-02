@@ -75,6 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	schIcon.addEventListener("click", () => {
 		const search = searchBox.value.toLowerCase();
+		window.location.hash = search;
 		const groups = [
 			{ reg: new RegExp("(?<!_)" + search + "(?=[ \t]*=)"), high: "highlight" }, 
 			{ reg: /has_dlc ?= ?"[^"]+"/, high: "warning" }
@@ -156,6 +157,10 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	document.getElementById("version").innerHTML = data.__version;
+	if (window.location.hash) {
+		searchBox.value = window.location.hash.replace("#", "");
+		schIcon.dispatchEvent(new Event("click"));
+	}
 
 	document.getElementById("loading").classList.add("hidden");
 	document.getElementById("main-content").classList.remove("hidden");
